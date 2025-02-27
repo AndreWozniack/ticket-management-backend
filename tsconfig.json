@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "paths": {
+      "*": ["./*"],
+      "logger": ["C:/Users/ninja/Desktop/lambda-layer/nodejs/dist/logger"]
+    },
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "ts-node": { "transpileOnly": true }
+}

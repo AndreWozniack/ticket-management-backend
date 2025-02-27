@@ -1,0 +1,46 @@
+{
+	"name": "estoque-full",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://github.com/Ninja-Parts/estoque-full#readme",
+	"bugs": {
+		"url": "https://github.com/Ninja-Parts/estoque-full/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ninja-Parts/estoque-full.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx nodemon src/server.ts --watch 'src/' -e ts",
+		"compile": "npx tsc",
+		"start": "node ./dist/server.js",
+		"deploy": "npx tsc && sls deploy"
+	},
+	"dependencies": {
+		"axios": "^1.7.9",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"express-async-errors": "^3.1.1",
+		"helmet": "^8.0.0",
+		"knex": "^3.1.0",
+		"morgan": "^1.10.0",
+		"mysql2": "^3.12.0",
+		"serverless-http": "^3.2.0",
+		"logger": "file:C:/Users/ninja/Desktop/lambda-layer/nodejs/dist/logger"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/dotenv": "^6.1.1",
+		"@types/express": "^5.0.0",
+		"@types/helmet": "^0.0.48",
+		"@types/morgan": "^1.9.9",
+		"nodemon": "^3.1.9",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3"
+	}
+}

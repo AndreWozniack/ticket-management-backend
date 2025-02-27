@@ -1,0 +1,33 @@
+service: ticket-manager
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  environment:
+    NODE_ENV: production
+    DB_HOST: ${env:DB_HOST}
+    DB_USER: ${env:DB_USER}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    DB_NAME: ${env:DB_NAME}
+    DB_NAME_NINJA: ${env:DB_NAME_NINJA}
+    DB_DIALECT: ${env:DB_DIALECT}
+    DB_PORT: ${env:DB_PORT}
+
+functions:
+  api:
+    handler: dist/app.handler
+    events:
+      - httpApi: "*"
+    layers:
+      - arn:aws:lambda:us-east-1:333312997002:layer:Api-node-layer:4
+
+package:
+  exclude:
+    - node_modules/**
+    - package-lock.json
+    - package.json
+    - tsconfig.json
+    - .git/**
+    - .github/**
+    - tests/**
+    - README.md
