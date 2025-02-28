@@ -47,7 +47,6 @@ ticketRouter.post('/', async (req, res, next) => {
 
 ticketRouter.put('/:id', async (req, res, next) => {
     try {
-        console.log(req.body);
         const ticketData = req.body as Ticket;
         const updatedTicket = await updateTicket(ticketData);
         res.status(200).json(updatedTicket);
